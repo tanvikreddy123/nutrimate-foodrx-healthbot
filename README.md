@@ -121,6 +121,3 @@ Please write clean, well-commented code and follow existing patterns.
 * NIH DASH Plan
 * MyPlate Guidelines
 * CDC Nutrition Recommendations
-
-```
-
