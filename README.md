@@ -1,127 +1,126 @@
-Nutrimate: FoodRx HealthBot 🍽️🤖
-Your Personalized Nutrition Companion, Powered by AI
+# Nutrimate: FoodRx HealthBot 🍎🤖  
+**Your Personalized Health & Nutrition Chatbot**
 
-Nutrimate-FoodRx-HealthBot is a smart, mobile-first health assistant designed to help users navigate food insecurity and chronic illness through intelligent, evidence-based nutrition support. Built with Flutter and integrated with Google Dialogflow CX, it delivers tailored food guidance, educational content, and empathetic AI conversations — all grounded in trusted dietary sources like the DASH plan and MyPlate.
+Nutrimate is a Flutter-based mobile app designed to empower users managing chronic conditions and food insecurity with personalized nutrition guidance. Combining AI chatbot interaction, diet education, and smart health tips, Nutrimate helps you make better food choices every day.
 
-🌟 Features
-🍏 Personalized Chatbot Support
-Engage with a conversational agent trained on medically accurate content (NIH, MyPlate, DASH). Receive real-time answers to health and diet-related questions.
+---
 
-🧠 Knowledge-Based Conversations
-Responses come from a curated document-backed knowledge base, not generic LLMs — ensuring precision, trust, and clarity.
+## ✨ Features
 
-🎯 Health-Aware Tips & Articles
-Users receive custom dietary advice and educational tips filtered by their personal health conditions and preferences.
+- 🍽️ **Personalized Nutrition Assistance**  
+  Ask about foods, diet plans (DASH, MyPlate), or medical nutrition, and get reliable answers from a knowledge-grounded AI chatbot powered by Dialogflow CX.
 
-🖼️ Minimal UI with Seamless Navigation
-Built using Flutter for cross-platform compatibility and designed in Figma, the interface is clean, accessible, and optimized for mobile UX.
+- 🥗 **Health-Aware Recommendations**  
+  Receive curated articles and daily nutrition tips tailored to your medical profile.
 
-🔐 Secure & Scalable Architecture
-All interactions are authenticated using Google Cloud service accounts. Modular backend services ensure scalability and future expansion (e.g., recipe planning, inventory tracking).
+- 📱 **Minimalist Cross-Platform UI**  
+  Smooth, intuitive interface built with Flutter for both Android and iOS.
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	Flutter
-AI Chatbot	Dialogflow CX (Google Cloud)
-Backend	Node.js
-Database	MongoDB Atlas
-Design	Figma
-Auth	Google OAuth (Service Account)
+- 🔒 **Secure Authentication & API Access**  
+  User data is protected using Google OAuth2 and service account authentication.
 
-🚀 Getting Started
-1. Prerequisites
-Flutter SDK (3.x or higher)
+---
 
-Node.js & npm
+## 🛠️ Tech Stack & Architecture
 
-Android/iOS emulator or physical device
+- **Frontend:** Flutter  
+- **AI Chatbot:** Google Dialogflow CX  
+- **Backend:** Node.js  
+- **Database:** MongoDB Atlas  
+- **Auth:** Google OAuth (Service Account)  
+- **Design:** Figma  
 
-Access to:
+The app follows a modular, feature-first architecture for easy maintenance and scalability.
 
-MongoDB Atlas instance
+---
 
-Dialogflow CX agent & service account
+## 🚀 Getting Started
 
-2. Clone the Repository
-bash
-Copy
-Edit
+### Prerequisites
+
+- Flutter SDK (version >=3.0.0 <4.0.0)  
+- Node.js & npm  
+- Android/iOS device or emulator  
+- Access to:  
+  - MongoDB Atlas cluster  
+  - Dialogflow CX agent  
+  - Google Cloud service account JSON key
+
+### Installation Steps
+
+1. **Clone the repository**  
+```bash
 git clone https://github.com/<your-username>/nutrimate-foodrx-healthbot.git
 cd nutrimate-foodrx-healthbot
-3. Install Flutter Dependencies
-bash
-Copy
-Edit
+````
+
+2. **Install dependencies**
+
+```bash
 flutter pub get
-4. Set Up Backend & Auth
-Place your dialogflow_auth.json in a secure location (e.g., assets/)
+```
 
-Configure your .env file (excluded from version control):
+3. **Configure environment variables**
+   Create a `.env` file in the project root and add:
 
-ini
-Copy
-Edit
-# MongoDB
-MONGODB_URI="your_mongo_uri"
-
-# Dialogflow CX
-DIALOGFLOW_PROJECT_ID="your_project_id"
-DIALOGFLOW_AGENT_ID="your_agent_id"
+```env
+MONGODB_URI="your-mongodb-connection-string"
+DIALOGFLOW_PROJECT_ID="your-gcp-project-id"
+DIALOGFLOW_AGENT_ID="your-dialogflow-agent-id"
 DIALOGFLOW_LOCATION="global"
 DIALOGFLOW_LANGUAGE_CODE="en"
-☑️ Note: Never commit .env files or service account keys to your repo.
+```
 
-5. Run the App
-bash
-Copy
-Edit
+> ⚠️ `.env` is ignored by git. Never commit this file.
+
+4. **Add Dialogflow service account key**
+   Place your Google Cloud service account JSON file inside the `assets/` folder as `dialogflow_auth.json`. This file authenticates the chatbot.
+
+> ⚠️ Also gitignored — keep it private.
+
+5. **Run the app**
+
+```bash
 flutter run
-🎥 Demo
-Watch the app in action:
-🔗 Demo Video Link
+```
 
-Screens include:
+---
 
-Health-focused onboarding
+## 📚 Documentation & Demo
 
-Real-time chatbot interactions
+* See our detailed [Project Wiki](#) for architecture and feature walkthroughs.
+* Watch the demo video showcasing the full app experience.
 
-Article suggestions based on user profile
+---
 
-Secure fallback handling for out-of-scope queries
+## 🙌 Contributing
 
-🧪 Testing
-✅ Functional testing on iOS/Android emulators
+We welcome contributions! To contribute:
 
-✅ Chatbot response validation (relevance + fallback)
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/your-feature-name`)
+3. Make your changes and commit (`git commit -m "Add your message"`)
+4. Push the branch (`git push origin feature/your-feature-name`)
+5. Open a Pull Request
 
-✅ Secure authentication flows (OAuth, token scope)
+Please write clean, well-commented code and follow existing patterns.
 
-✅ UX validation through prototyping & emulator review
+---
 
-👨‍💻 Contributors
-Name	Contribution Area
-Tanvik Reddy Kotha	Chatbot UI, Dialogflow CX integration, Auth & APIs
-Anika Anjum	Knowledge base training, fallback design, CX flows
-Jay Hiteshkumar Jariwala	Login & dashboard UI, educational module dev
+## 🧭 Future Plans
 
-🧭 Future Directions
-📦 Pantry & food inventory tracking
+* Pantry & food inventory management
+* AI-driven recipe recommendations based on health profile and pantry
+* Progress dashboards for daily/weekly tracking
+* Improved AI conversation session continuity
 
-🧑‍🍳 Recipe recommendation system based on health profiles
+---
 
-📊 Nutrition/hydration analytics with daily goals
+## 📖 References
 
-🔄 Session memory for more natural AI conversations
+* NIH DASH Plan
+* MyPlate Guidelines
+* CDC Nutrition Recommendations
 
-🧪 Research publication & real-world deployment opportunities
+```
 
-📚 References
-NIH DASH Plan
-
-MyPlate by USDA
-
-CDC Nutrition Guidelines
-
-🙌 Get Involved
-We welcome feedback and collaboration! Feel free to open an issue or fork the repo to start contributing.
